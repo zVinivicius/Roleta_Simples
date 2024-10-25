@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roleta de Cupons de Desconto</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		
+</head>
+<body>
+    <!--Pop-up-->
+    <button id="abrir-roleta">Abrir Roleta de Cupons</button>
+
+    <!-- Container do Pop-up-->
+    <div id="roleta-popup" class="roleta-popup">
+      <div class="roleta-container">
+        <div class="container">
+            <img src="ponteiro.png" alt="ponteiro Topo" id="seta-topo">
+            <canvas id="wheel"></canvas>
+            <img src="meio.png" alt="Imagem no Centro da Roleta" id="imagem-centro-roleta">
+            <button id="spin-btn">Girar</button>
+            <div id="final-value"></div>
+        </div>
+        <button id="fechar-roleta" class="fechar-roleta">&times;</button>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

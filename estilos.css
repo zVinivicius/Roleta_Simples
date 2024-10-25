@@ -1,0 +1,178 @@
+body {
+    background: rgb(60, 60, 242);
+    background: linear-gradient(90deg, rgba(60, 60, 242, 1) 0%, rgba(98, 245, 230, 1) 52%, rgba(60, 60, 242, 1) 100%);
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Estilos para o Botão de Abrir Roleta */
+
+#abrir-roleta {
+
+  background-color: #ff8533;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  height: 42px;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  border: 0;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  
+}
+
+#abrir-roleta:hover {
+    background-color: #3e8e41;
+}
+
+/* Estilos para o Pop-up da Roleta */
+
+.roleta-popup {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay transparente */
+  z-index: 999; /* Garante que fique por cima de outros elementos */
+}
+
+.roleta-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff; /* Fundo branco para o container da roleta */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 450px; /* Ajuste o tamanho conforme necessário */
+}
+
+.container {
+    text-align: center;
+    display: inline-block;
+    position: relative; /* Adicionado para posicionar a flecha */
+}
+
+#wheel {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #ff8432;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#imagem-centro-roleta {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+    width: 8vh; 
+    height: 8vh; 
+    border-radius: 50%; 
+  }
+
+
+#spin-btn {
+    background-color: #ff8533;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    height: 42px;
+    justify-content: center;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border: 0;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+#spin-btn:hover {
+    background-color: #3e8e41;
+}
+
+#final-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fechar-roleta {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Flecha para cima */
+
+#seta-topo {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #fff;
+  z-index: 1;
+}
+
+/* Responsividade para Celulares */
+
+@media only screen and (max-width: 768px) {
+.roleta-container {
+    width: 90%; /* Ajusta a largura para 90% da tela */
+    padding: 10px; /* Reduz o padding para economizar espaço */
+  }
+  
+  #wheel {
+    width: 80vw; /* Ajusta a largura da roleta para 80% da viewport */
+    height: 80vw; /* Mantém a proporção da roleta */
+    margin-bottom: 10px; /* Reduz o margin-bottom para economizar espaço */
+  }
+  
+  #spin-btn {
+    padding: 10px 20px; /* Ajusta o padding do botão para economizar espaço */
+    font-size: 16px; /* Reduz o tamanho da fonte do botão */
+  }
+  
+  #final-value {
+    font-size: 20px; /* Ajusta o tamanho da fonte do resultado */
+    margin-top: 10px; /* Reduz o margin-top para economizar espaço */
+  }
+  
+.fechar-roleta {
+    top: 5px; /* Ajusta a posição do botão de fechar */
+    right: 5px; /* Ajusta a posição do botão de fechar */
+    font-size: 20px; /* Ajusta o tamanho da fonte do botão de fechar */
+  }
+  
+  /* Ajuste para a flecha em telas menores */
+ .flecha-para-cima {
+    bottom: -15px; /* Ajuste para telas menores */
+    border-bottom: 15px solid #fff; /* Ajuste para telas menores */
+  }
+}
+
+		
